@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Premium Aluminum & Glass Solutions in Ilorin. Expert aluminum fabrication, glass installations, and building finishing services since 2015.">
+    <meta name="keywords" content="Aluminum works in Ilorin, Glass installation Kwara, Aluminum doors Nigeria, Merlin Aluminum, Building finishing Ilorin">
+    <meta name="theme-color" content="#0a1628">
+    <title>Merlin Aluminum & Glass Solutions | Premium Building Solutions in Ilorin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0a1628;
+            --secondary-blue: #1e3a8a;
+            --accent-orange: #f97316;
+            --accent-orange-hover: #ea580c;
+            --light-bg: #f8fafc;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.8); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation - Mobile First */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 0.75rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--white);
+            padding: 0.5rem;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 350px;
+            height: 100vh;
+            background: var(--primary-blue);
+            z-index: 1001;
+            padding: 1.5rem;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--white);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s;
+            margin-left: auto;
+        }
+
+        .mobile-menu-close:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .mobile-menu-links li {
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.3s;
+        }
+
+        .mobile-menu.active .mobile-menu-links li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-menu.active .mobile-menu-links li:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu.active .mobile-menu-links li:nth-child(2) { transition-delay: 0.2s; }
+        .mobile-menu.active .mobile-menu-links li:nth-child(3) { transition-delay: 0.3s; }
+        .mobile-menu.active .mobile-menu-links li:nth-child(4) { transition-delay: 0.4s; }
+        .mobile-menu.active .mobile-menu-links li:nth-child(5) { transition-delay: 0.5s; }
+        .mobile-menu.active .mobile-menu-links li:nth-child(6) { transition-delay: 0.6s; }
+
+        .mobile-menu-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: block;
+            padding: 1rem;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu-links a:hover {
+            background: rgba(249, 115, 22, 0.2);
+            color: var(--accent-orange);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section - Mobile Optimized */
+        .hero {
+            min-height: 100vh;
+            min-height: 100dvh; /* Dynamic viewport height for mobile */
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.92), rgba(30, 58, 138, 0.88)), url('https://images.pexels.com/photos/31573572/pexels-photo-31573572/free-photo-of-modern-glass-facade-reflecting-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 0 40px;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(249, 115, 22, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            animation: fadeInUp 1s ease;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge i {
+            color: var(--accent-orange);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: var(--accent-orange);
+            font-size: 0.55em;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.4s both;
+            line-height: 1.7;
+            max-width: 100%;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            width: 100%;
+            min-height: 52px; /* Touch friendly */
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-stats {
+            display: none;
+        }
+
+        /* Section Base */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--accent-orange);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.875rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* About Section Mobile */
+        .about-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            order: 2;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -15px;
+            right: 15px;
+            background: var(--accent-orange);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .experience-badge .years {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+            display: block;
+        }
+
+        .experience-badge .text {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .about-content > p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .credentials {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--light-bg);
+            border-radius: 16px;
+        }
+
+        .credential-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.2));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-orange);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .credential-text h4 {
+            font-size: 1rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .credential-text p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Services Mobile */
+        .services {
+            background: linear-gradient(180deg, var(--light-bg) 0%, var(--white) 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 1.75rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .service-card:active {
+            transform: scale(0.98);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(249, 115, 22, 0.1));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--secondary-blue);
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Projects Mobile */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .comparison-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .comparison-container {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Optimized for mobile */
+            overflow: hidden;
+            touch-action: pan-y; /* Allow vertical scroll, handle horizontal in JS */
+        }
+
+        .comparison-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .comparison-image.before {
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            filter: grayscale(30%);
+        }
+
+        .comparison-slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 40px; /* Wider for touch */
+            transform: translateX(-50%);
+            cursor: col-resize;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comparison-slider-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            background: var(--accent-orange);
+            box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+        }
+
+        .comparison-slider-handle {
+            position: relative;
+            width: 44px;
+            height: 44px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 3px solid white;
+            z-index: 11;
+        }
+
+        .comparison-labels {
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            pointer-events: none;
+        }
+
+        .label {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comparison-info {
+            padding: 1.5rem;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--accent-orange);
+            padding: 0.35rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comparison-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .comparison-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Why Choose Us Mobile */
+        .why-us {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1e293b 100%);
+            color: var(--white);
+        }
+
+        .why-us .section-title {
+            color: var(--white);
+        }
+
+        .why-us .section-subtitle {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.25rem;
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            opacity: 0.85;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Mobile */
+        .testimonials {
+            background: linear-gradient(180deg, var(--light-bg) 0%, var(--white) 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .testimonial-text {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-orange));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            color: var(--primary-blue);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(249, 115, 22, 0.1));
+            color: var(--secondary-blue);
+            padding: 0.875rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            border: 1px solid rgba(30, 58, 138, 0.2);
+        }
+
+        /* Contact Mobile */
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.75rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-info > p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--light-bg);
+            border-radius: 16px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.2));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-orange);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+
+        .contact-form-wrapper {
+            background: var(--light-bg);
+            padding: 1.75rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--white);
+            min-height: 52px; /* Touch friendly */
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer Mobile */
+        .footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .logo img {
+            height: 60px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            color: var(--white);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-orange);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.875rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.875rem;
+        }
+
+        /* Floating Buttons Mobile */
+        .floating-buttons {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            z-index: 999;
+        }
+
+        .float-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .float-btn.whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            animation: pulse-glow 2s infinite;
+        }
+
+        .float-btn.quote {
+            background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+        }
+
+        /* Page Loader */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-blue);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .loader-logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .loader-bar {
+            width: 150px;
+            height: 3px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .loader-progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-orange), #fbbf24);
+            animation: loading 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { width: 0%; margin-left: 0; }
+            50% { width: 100%; margin-left: 0; }
+            100% { width: 0%; margin-left: 100%; }
+        }
+
+        /* TABLET BREAKPOINT (768px and up) */
+        @media (min-width: 768px) {
+            .nav-container {
+                padding: 0 2rem;
+            }
+
+            .logo img {
+                height: 55px;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+                max-width: 600px;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                width: auto;
+                padding: 1.125rem 2rem;
+            }
+
+            .section {
+                padding: 6rem 0;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .about-image-wrapper {
+                order: 0;
+                flex: 1;
+            }
+
+            .about-content {
+                flex: 1;
+            }
+
+            .about-content h3 {
+                font-size: 2rem;
+            }
+
+            .credentials {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .comparison-container {
+                height: 350px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .contact-info, .contact-form-wrapper {
+                flex: 1;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .floating-buttons {
+                bottom: 2rem;
+                right: 2rem;
+            }
+
+            .float-btn {
+                width: 64px;
+                height: 64px;
+                font-size: 1.75rem;
+            }
+        }
+
+        /* DESKTOP BREAKPOINT (1024px and up) */
+        @media (min-width: 1024px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 2.5rem;
+                list-style: none;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: rgba(255,255,255,0.9);
+                font-weight: 500;
+                font-size: 0.95rem;
+                transition: all 0.3s;
+                position: relative;
+                padding: 0.5rem 0;
+            }
+
+            .nav-links a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--accent-orange);
+                transition: width 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: var(--accent-orange);
+            }
+
+            .nav-links a:hover::after {
+                width: 100%;
+            }
+
+            .hero {
+                background-attachment: fixed;
+                padding: 0;
+            }
+
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .hero-stats {
+                display: flex;
+                position: absolute;
+                bottom: 4rem;
+                left: 0;
+                right: 0;
+                justify-content: center;
+                gap: 6rem;
+                color: var(--white);
+                animation: fadeInUp 1s ease 0.8s both;
+            }
+
+            .stat-item {
+                text-align: center;
+                position: relative;
+            }
+
+            .stat-item::after {
+                content: '';
+                position: absolute;
+                right: -3rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 60px;
+                background: rgba(255,255,255,0.2);
+            }
+
+            .stat-item:last-child::after {
+                display: none;
+            }
+
+            .stat-number {
+                font-size: 3.5rem;
+                font-weight: 800;
+                background: linear-gradient(135deg, var(--accent-orange), #fbbf24);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                line-height: 1;
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+                opacity: 0.8;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+
+            .comparison-container {
+                height: 400px;
+            }
+        }
+
+        /* LARGE DESKTOP (1400px and up) */
+        @media (min-width: 1400px) {
+            .hero h1 {
+                font-size: 5rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) {
+            .service-card:hover {
+                transform: none;
+            }
+            
+            .comparison-slider {
+                width: 60px; /* Even wider for touch */
+            }
+            
+            .comparison-slider-handle {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <img src="logo.png" alt="Merlin Logo" class="loader-logo">
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Merlin Aluminum & Glass Solutions">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-menu-links">
+            <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMobileMenu()">About Us</a></li>
+            <li><a href="#services" onclick="toggleMobileMenu()">Services</a></li>
+            <li><a href="#projects" onclick="toggleMobileMenu()">Projects</a></li>
+            <li><a href="#testimonials" onclick="toggleMobileMenu()">Reviews</a></li>
+            <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <i class="fas fa-award"></i>
+                <span>Trusted by 500+ clients across Ilorin since 2015</span>
+            </div>
+            <h1 class="animate-on-scroll">
+                Premium Aluminum & Glass Solutions
+                <span>In Ilorin & Beyond</span>
+            </h1>
+            <p class="animate-on-scroll animate-delay-1">
+                We deliver durable, modern, and high-quality aluminum and glass works for homes and commercial buildings. Transform your space with expert craftsmanship.
+            </p>
+            <div class="hero-buttons animate-on-scroll animate-delay-2">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-calculator"></i>
+                    Get Free Quote
+                </a>
+                <a href="https://wa.me/2348149428166" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-stats animate-on-scroll animate-delay-3">
+            <div class="stat-item">
+                <div class="stat-number" data-count="9">0</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="500">0</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">% Satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Building Excellence Since 2015</h2>
+                <p class="section-subtitle">Your trusted partner for premium aluminum and glass solutions in Ilorin, Kwara State.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper animate-on-scroll">
+                    <div class="about-image">
+                        <img src="https://kimi-web-img.moonshot.cn/img/alteza.in/c24c63aed1c8393c58a2a4c050f1850b93a7baee.png" alt="Professional Aluminum Installation" loading="lazy">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">9+</span>
+                        <span class="text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll animate-delay-1">
+                    <h3>Crafting Modern Spaces with Precision & Quality</h3>
+                    <p>Merlin Aluminum & Glass Solutions specializes in aluminum fabrication, glass installations, and comprehensive building finishing services. We are trusted for quality workmanship, durability, and modern designs.</p>
+                    <p>From residential homes to commercial complexes, we bring expertise, precision, and dedication to every project, ensuring customer satisfaction through exceptional service delivery.</p>
+                    
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>Established</h4>
+                                <p>May 26, 2015</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>Registration No</h4>
+                                <p>RC: 8341970</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>Location</h4>
+                                <p>Ilorin, Kwara State</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>Expert Team</h4>
+                                <p>Skilled Professionals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Services</span>
+                <h2 class="section-title">Comprehensive Building Solutions</h2>
+                <p class="section-subtitle">From fabrication to installation, we provide end-to-end aluminum and glass services.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-door-open"></i></div>
+                    <h3>Aluminum Doors & Windows</h3>
+                    <p>Custom fabricated aluminum frames with premium glass installations for residential and commercial properties.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-1">
+                    <div class="service-icon"><i class="fas fa-th-large"></i></div>
+                    <h3>Office Partitioning</h3>
+                    <p>Modern office and home partitioning solutions using high-quality aluminum and glass materials.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-2">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3>Aluminum Roofing</h3>
+                    <p>Durable aluminum roofing solutions designed to withstand harsh weather conditions.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-broom"></i></div>
+                    <h3>House Cleaning</h3>
+                    <p>Professional post-construction and maintenance cleaning services.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-1">
+                    <div class="service-icon"><i class="fas fa-blinds"></i></div>
+                    <h3>Window Blinds</h3>
+                    <p>Stylish and functional window blind installations for privacy and light control.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-2">
+                    <div class="service-icon"><i class="fas fa-couch"></i></div>
+                    <h3>Interior Decor</h3>
+                    <p>Complete interior design and decoration services to transform your living spaces.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-grip-lines"></i></div>
+                    <h3>Stainless Handrails</h3>
+                    <p>Elegant stainless steel handrail installations for stairs and balconies.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-1">
+                    <div class="service-icon"><i class="fas fa-door-closed"></i></div>
+                    <h3>Automatic & Frameless Doors</h3>
+                    <p>Modern automatic sliding doors and sleek frameless glass door installations.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-2">
+                    <div class="service-icon"><i class="fas fa-shower"></i></div>
+                    <h3>Shower Cubicle Doors</h3>
+                    <p>Custom glass shower enclosures and cubicle doors for contemporary bathrooms.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h3>Aluminum Wall Cladding</h3>
+                    <p>Exterior wall cladding solutions for modern architectural aesthetics.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-1">
+                    <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Wall Screeding</h3>
+                    <p>Professional wall smoothing and preparation services for perfect finishes.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-2">
+                    <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Windows & Pillars Design</h3>
+                    <p>Architectural design services for custom window frames and decorative pillars.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-border-style"></i></div>
+                    <h3>POP Ceiling</h3>
+                    <p>Interior and exterior plaster of Paris ceiling designs.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-1">
+                    <div class="service-icon"><i class="fas fa-truck-loading"></i></div>
+                    <h3>Building Materials Supply</h3>
+                    <p>Quality building materials supply for construction projects.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-2">
+                    <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+                    <h3>General Contracting</h3>
+                    <p>Full-service general contracting for residential and commercial projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - 6 Before/After -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Transformation Gallery</h2>
+                <p class="section-subtitle">Drag the slider to see our remarkable before and after transformations.</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="comparison-card animate-on-scroll">
+                    <div class="comparison-container" id="comparison1">
+                        <img src="project1-before.jpg" alt="Before" class="comparison-image before" loading="lazy">
+                        <img src="project1-after.jpg" alt="After" class="comparison-image after" loading="lazy">
+                        <div class="comparison-slider" data-comparison="comparison1">
+                            <div class="comparison-slider-line"></div>
+                            <div class="comparison-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                        </div>
+                        <div class="comparison-labels">
+                            <span class="label">Before</span>
+                            <span class="label">After</span>
+                        </div>
+                    </div>
+                    <div class="comparison-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Modern Aluminum Window Installation</h3>
+                        <p>Complete replacement with energy-efficient aluminum frames and double-glazed glass.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="comparison-card animate-on-scroll animate-delay-1">
+                    <div class="comparison-container" id="comparison2">
+                        <img src="project2-before.jpg" alt="Before" class="comparison-image before" loading="lazy">
+                        <img src="project2-after.jpg" alt="After" class="comparison-image after" loading="lazy">
+                        <div class="comparison-slider" data-comparison="comparison2">
+                            <div class="comparison-slider-line"></div>
+                            <div class="comparison-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                        </div>
+                        <div class="comparison-labels">
+                            <span class="label">Before</span>
+                            <span class="label">After</span>
+                        </div>
+                    </div>
+                    <div class="comparison-info">
+                        <span class="project-category">Commercial</span>
+                        <h3>Glass Storefront Transformation</h3>
+                        <p>Upgraded commercial entrance with sleek aluminum framing and tempered glass.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="comparison-card animate-on-scroll">
+                    <div class="comparison-container" id="comparison3">
+                        <img src="project3-before.jpg" alt="Before" class="comparison-image before" loading="lazy">
+                        <img src="project3-after.jpg" alt="After" class="comparison-image after" loading="lazy">
+                        <div class="comparison-slider" data-comparison="comparison3">
+                            <div class="comparison-slider-line"></div>
+                            <div class="comparison-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                        </div>
+                        <div class="comparison-labels">
+                            <span class="label">Before</span>
+                            <span class="label">After</span>
+                        </div>
+                    </div>
+                    <div class="comparison-info">
+                        <span class="project-category">Bathroom</span>
+                        <h3>Frameless Glass Shower Enclosure</h3>
+                        <p>Luxury bathroom upgrade with custom frameless glass shower cubicle.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="comparison-card animate-on-scroll animate-delay-1">
+                    <div class="comparison-container" id="comparison4">
+                        <img src="project4-before.jpg" alt="Before" class="comparison-image before" loading="lazy">
+                        <img src="project4-after.jpg" alt="After" class="comparison-image after" loading="lazy">
+                        <div class="comparison-slider" data-comparison="comparison4">
+                            <div class="comparison-slider-line"></div>
+                            <div class="comparison-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                        </div>
+                        <div class="comparison-labels">
+                            <span class="label">Before</span>
+                            <span class="label">After</span>
+                        </div>
+                    </div>
+                    <div class="comparison-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Aluminum Sliding Door System</h3>
+                        <p>Indoor-outdoor living transformation with premium aluminum sliding doors.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="comparison-card animate-on-scroll">
+                    <div class="comparison-container" id="comparison5">
+                        <img src="project5-before.jpg" alt="Before" class="comparison-image before" loading="lazy">
+                        <img src="project5-after.jpg" alt="After" class="comparison-image after" loading="lazy">
+                        <div class="comparison-slider" data-comparison="comparison5">
+                            <div class="comparison-slider-line"></div>
+                            <div class="comparison-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                        </div>
+                        <div class="comparison-labels">
+                            <span class="label">Before</span>
+                            <span class="label">After</span>
+                        </div>
+                    </div>
+                    <div class="comparison-info">
+                        <span class="project-category">Exterior</span>
+                        <h3>Modern Glass Balcony Railing</h3>
+                        <p>Safety meets aesthetics with frameless glass railings and stainless steel posts.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="comparison-card animate-on-scroll animate-delay-1">
+                    <div class="comparison-container" id="comparison6">
+                        <img src="project6-before" alt="Before" class="comparison-image before" loading="lazy">
+                        <img src="project6-after" alt="After" class="comparison-image after" loading="lazy">
+                        <div class="comparison-slider" data-comparison="comparison6">
+                            <div class="comparison-slider-line"></div>
+                            <div class="comparison-slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                        </div>
+                        <div class="comparison-labels">
+                            <span class="label">Before</span>
+                            <span class="label">After</span>
+                        </div>
+                    </div>
+                    <div class="comparison-info">
+                        <span class="project-category">Exterior</span>
+                        <h3>Aluminum Wall Cladding</h3>
+                        <p>Complete exterior transformation with modern aluminum composite panels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-us" id="why-us">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">The Merlin Advantage</h2>
+                <p class="section-subtitle">What sets us apart from the competition.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Premium Materials</h3>
+                    <p>We source only the highest-grade aluminum and glass from certified suppliers.</p>
+                </div>
+                <div class="feature-card animate-on-scroll animate-delay-1">
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Expert Craftsmen</h3>
+                    <p>Our team comprises skilled professionals with decades of combined experience.</p>
+                </div>
+                <div class="feature-card animate-on-scroll animate-delay-2">
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Transparent, fair pricing without hidden costs. Best value for premium quality.</p>
+                </div>
+                <div class="feature-card animate-on-scroll animate-delay-3">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>On-Time Delivery</h3>
+                    <p>We respect your time and deadlines, ensuring projects are completed as scheduled.</p>
+                </div>
+                <div class="feature-card animate-on-scroll animate-delay-4">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Trusted Since 2015</h3>
+                    <p>Nearly a decade of proven excellence and customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real feedback from real customers across Ilorin.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">Excellent service! My aluminum windows were installed perfectly and on time. The team was professional and the quality exceeded my expectations.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info"><h4>Adewale T.</h4><p>Tanke, Ilorin</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll animate-delay-1">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">Very professional and affordable. The glass finishing completely transformed my shop front. Customers now compliment the modern look daily.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">Z</div>
+                        <div class="author-info"><h4>Zainab M.</h4><p>Challenge, Ilorin</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll animate-delay-2">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">Reliable and trustworthy company. Their work is clean and modern. They installed our office partitions and the result is fantastic.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info"><h4>Musa A.</h4><p>G.R.A, Ilorin</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">Fast delivery and quality materials. I will definitely work with them again. The shower cubicle they installed is exactly what I wanted.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">K</div>
+                        <div class="author-info"><h4>Kemi O.</h4><p>Pipeline, Ilorin</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll animate-delay-1">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">Best aluminum works in Ilorin! They did my complete house windows and doors. The attention to detail is remarkable.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info"><h4>James O.</h4><p>Unity Road, Ilorin</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll animate-delay-2">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">Outstanding service from start to finish. They helped design and install our office glass partitions. Highly recommended!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info"><h4>Sarah K.</h4><p>Sabo, Ilorin</p></div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <div class="trust-badge animate-on-scroll">
+                    <i class="fas fa-check-circle"></i>
+                    Trusted by 500+ clients across Ilorin
+                </div>
+                <br>
+                <a href="#contact" class="btn btn-primary animate-on-scroll" style="margin-top: 2rem;">
+                    Get Your Quote Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Contact Us</span>
+                <h2 class="section-title">Start Your Project</h2>
+                <p class="section-subtitle">Ready to transform your space? Get in touch for a free consultation.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Let's Discuss Your Vision</h3>
+                    <p>Whether it's a small home renovation or a large commercial project, we're here to bring your ideas to life.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>Visit Our Office</h4>
+                                <p>NO 25 JIDAH COMPOUND, Eruda,<br>Ilorin 240101, Kwara State</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <a href="mailto:merlinaluminium001@gmail.com">merlinaluminium001@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-text">
+                                <h4>Call or WhatsApp</h4>
+                                <a href="https://wa.me/2348149428166">+234 814 942 8166</a>
+                                <p style="font-size: 0.85rem; margin-top: 0.25rem;">Mon-Sat, 8am-6pm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/2348149428166" class="btn btn-primary" style="margin-bottom: 1rem;">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-form-wrapper animate-on-scroll animate-delay-1">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="windows">Aluminum Windows</option>
+                                <option value="doors">Aluminum Doors</option>
+                                <option value="partitioning">Office Partitioning</option>
+                                <option value="shower">Shower Cubicles</option>
+                                <option value="roofing">Aluminum Roofing</option>
+                                <option value="cladding">Wall Cladding</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message & Get Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/mnt/kimi/upload/273AA2F4-2873-4C87-B20E-719F12D0A562.jpg" alt="Merlin Aluminum" style="height: 60px; filter: brightness(0) invert(1);">
+                    </a>
+                    <p>Premium aluminum and glass solutions for modern construction. Quality, durability, and excellence since 2015.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/2348149428166" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Aluminum Windows</a></li>
+                        <li><a href="#services">Glass Doors</a></li>
+                        <li><a href="#services">Office Partitioning</a></li>
+                        <li><a href="#services">Shower Enclosures</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:merlinaluminium001@gmail.com">merlinaluminium001@gmail.com</a></li>
+                        <li><a href="tel:+2348149428166">+234 814 942 8166</a></li>
+                        <li>No 25 Jidah Compound, Eruda, Ilorin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Merlin Aluminum & Glass Solutions. All rights reserved. | RC: 8341970</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/2348149428166" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#contact" class="float-btn quote" aria-label="Request quote">
+            <i class="fas fa-calculator"></i>
+        </a>
+    </div>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('hidden');
+            }, 1200);
+        });
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('overlay');
+            const isOpen = mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+
+        // Navbar Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll Animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.querySelectorAll('.stat-number').forEach(stat => {
+                        if (!stat.classList.contains('counted')) {
+                            animateCounter(stat);
+                            stat.classList.add('counted');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        function animateCounter(element) {
+            const target = parseInt(element.dataset.count);
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target + (target === 100 ? '%' : '+');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (target === 100 ? '%' : '');
+                }
+            }, 16);
+        }
+
+        // Comparison Sliders - Touch Optimized
+        document.querySelectorAll('.comparison-container').forEach(container => {
+            const slider = container.querySelector('.comparison-slider');
+            const beforeImage = container.querySelector('.comparison-image.before');
+            let isDragging = false;
+
+            const updateSlider = (clientX) => {
+                const rect = container.getBoundingClientRect();
+                let x = clientX - rect.left;
+                x = Math.max(0, Math.min(x, rect.width));
+                const percentage = (x / rect.width) * 100;
+                slider.style.left = percentage + '%';
+                beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            };
+
+            // Mouse events
+            slider.addEventListener('mousedown', (e) => { isDragging = true; e.preventDefault(); });
+            window.addEventListener('mouseup', () => isDragging = false);
+            container.addEventListener('mousemove', (e) => isDragging && updateSlider(e.clientX));
+
+            // Touch events - Passive for scroll performance
+            slider.addEventListener('touchstart', (e) => { 
+                isDragging = true; 
+                e.preventDefault();
+            }, { passive: false });
+            
+            window.addEventListener('touchend', () => isDragging = false);
+            
+            container.addEventListener('touchmove', (e) => {
+                if (isDragging) {
+                    e.preventDefault(); // Prevent scroll while dragging
+                    updateSlider(e.touches[0].clientX);
+                }
+            }, { passive: false });
+
+            // Tap to move
+            container.addEventListener('click', (e) => {
+                if (e.target === container || e.target.classList.contains('comparison-image')) {
+                    updateSlider(e.clientX);
+                }
+            });
+        });
+
+        // Form Submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service');
+            const serviceText = service.value ? `Service: ${service.options[service.selectedIndex].text}%0A` : '';
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Hello Merlin Aluminum & Glass Solutions,%0A%0AMy Name: ${name}%0APhone: ${phone}%0A${serviceText}Message: ${message}%0A%0APlease get back to me with a quote. Thank you!`;
+            
+            window.open(`https://wa.me/2348149428166?text=${whatsappMessage}`, '_blank');
+            document.getElementById('contactForm').reset();
+            
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            btn.style.background = '#10b981';
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.style.background = '';
+            }, 3000);
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
